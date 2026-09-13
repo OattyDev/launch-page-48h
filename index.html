@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Launch Page in 48 Hours — $149 Conversion Landing Page</title>
+  <meta name="description" content="Get a conversion landing page with Stripe Payment Link, live on Vercel within 48 hours. Fixed scope for solo founders and small SaaS. $149, or $249 same-day rush." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0b0d;
+      --bg-elevated: #12141a;
+      --bg-card: #161922;
+      --border: #252833;
+      --text: #e8eaed;
+      --text-muted: #9aa0ab;
+      --accent: #2dd4bf;
+      --accent-hover: #5eead4;
+      --accent-dim: rgba(45, 212, 191, 0.12);
+      --radius: 10px;
+      --max: 720px;
+      --wide: 960px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    .wrap {
+      width: min(100% - 2.5rem, var(--max));
+      margin-inline: auto;
+    }
+
+    .wrap-wide {
+      width: min(100% - 2.5rem, var(--wide));
+      margin-inline: auto;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 0;
+      position: sticky;
+      top: 0;
+      background: rgba(10, 11, 13, 0.88);
+      backdrop-filter: blur(10px);
+      z-index: 50;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--accent); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.35rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #042f2e;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: #042f2e;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.65rem 1.1rem;
+      font-size: 0.875rem;
+    }
+
+    .btn-ghost:hover {
+      color: var(--text);
+      border-color: #3a3f4d;
+    }
+
+    .btn-lg {
+      padding: 0.95rem 1.75rem;
+      font-size: 1.05rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5.5rem 0 4.5rem;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 2.85rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      max-width: 18ch;
+      margin-inline: auto;
+    }
+
+    .hero .lede {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 38rem;
+      margin: 0 auto 2rem;
+      line-height: 1.65;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-note {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Sections */
+    section {
+      padding: 4.5rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 1.85rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro {
+      color: var(--text-muted);
+      max-width: 36rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Included grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card p {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Process */
+    .steps {
+      display: grid;
+      gap: 1.25rem;
+      counter-reset: step;
+    }
+
+    @media (min-width: 720px) {
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    .step {
+      position: relative;
+      padding-top: 0.25rem;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.015em;
+    }
+
+    .step p {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+    }
+
+    /* Pricing */
+    .pricing-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem 1.75rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .pricing-card .price {
+      font-size: 2.75rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    .pricing-card .price span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0;
+    }
+
+    .pricing-card .rush {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 1.75rem;
+    }
+
+    .pricing-card li {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      padding: 0.45rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      border-top: 1px solid var(--border);
+    }
+
+    .pricing-card li:first-child { border-top: none; }
+
+    .pricing-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .pricing-card .btn { width: 100%; }
+
+    .pricing-foot {
+      text-align: center;
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.35rem 0;
+    }
+
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+
+    .faq-item h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.015em;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0 3rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 640px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    footer p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Target callout */
+    .who {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.4rem;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+
+    .who strong {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .who span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap-wide header-inner">
+      <div class="logo">Launch Page <span>in 48h</span></div>
+      <a class="btn btn-ghost" href="#buy">Buy — $149</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Fixed scope · 48-hour turnaround</div>
+        <h1>A live sales page before the week ends</h1>
+        <p class="lede">
+          Conversion landing page + Stripe Payment Link, deployed to a free Vercel URL within 48 hours of kickoff. Built for solo founders and small SaaS teams whose marketing site is weak, outdated, or missing.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#buy">Buy — $149</a>
+          <a class="btn btn-ghost" href="#faq">See what's included</a>
+        </div>
+        <p class="hero-note">Rush available: $249 same-day. One page. Clear scope. No retainers.</p>
+
+        <div class="who">
+          <strong>Who this is for</strong>
+          <span>Solo founders and small SaaS with a product that works — but no credible page to send buyers to.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's included -->
+    <section id="included">
+      <div class="wrap">
+        <p class="section-label">Deliverable</p>
+        <h2>What's included</h2>
+        <p class="section-intro">One focused page. No extras. Everything needed to take payment and track visits.</p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>1 conversion page</h3>
+            <p>Single-page layout: hero, offer, process, pricing, FAQ, CTA. Written and designed for your product.</p>
+          </div>
+          <div class="card">
+            <h3>Copy that sells the outcome</h3>
+            <p>Honest, specific copy from your product URL and a short brief — not filler paragraphs.</p>
+          </div>
+          <div class="card">
+            <h3>Mobile-ready layout</h3>
+            <p>Responsive from phone to desktop. Fast, static HTML. No framework bloat.</p>
+          </div>
+          <div class="card">
+            <h3>Analytics stub</h3>
+            <p>Placeholder ready for Plausible, GA4, or your preferred tracker — wired so you can drop in an ID.</p>
+          </div>
+          <div class="card">
+            <h3>Payment button</h3>
+            <p>CTA wired to a Stripe Payment Link so buyers can pay the moment the page goes live.</p>
+          </div>
+          <div class="card">
+            <h3>Live Vercel URL</h3>
+            <p>Deployed to a free Vercel URL within 48 hours of kickoff. Shareable the same day it ships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process">
+      <div class="wrap">
+        <p class="section-label">Process</p>
+        <h2>Three steps. Forty-eight hours.</h2>
+        <p class="section-intro">Kickoff starts when payment clears and your product URL is in hand.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Send your URL</h3>
+            <p>Pay, then reply with your product URL and any must-have points. That's the brief.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Page gets built</h3>
+            <p>Copy, layout, payment button, analytics stub, and deploy — within 48 hours.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>You share the link</h3>
+            <p>You get a live Vercel URL. Start sending traffic. Revisions: one round of small copy/layout fixes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="buy">
+      <div class="wrap">
+        <p class="section-label" style="text-align:center">Pricing</p>
+        <h2 style="text-align:center">Simple fixed price</h2>
+        <p class="section-intro" style="text-align:center;margin-inline:auto">No hourly billing. No scope creep. One deliverable.</p>
+        <div class="pricing-card">
+          <p class="section-label" style="margin-bottom:0">Launch Page in 48 Hours</p>
+          <div class="price">$149 <span>standard</span></div>
+          <p class="rush">Rush: $249 · same-day turnaround</p>
+          <ul>
+            <li>1 page, copy, mobile layout</li>
+            <li>Analytics stub + Stripe Payment Link button</li>
+            <li>Live on free Vercel URL in 48 hours</li>
+            <li>One round of small revisions</li>
+          </ul>
+          <a class="btn btn-primary btn-lg" href="#buy">Buy — $149</a>
+        </div>
+        <p class="pricing-foot">Stripe Payment Link TBD — button is a placeholder until checkout is live.<br />Questions? Reply with your product URL.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <p class="section-label">FAQ</p>
+        <h2>Common questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>What do you need from me?</h3>
+            <p>Your product URL, who it's for, and the price or CTA you want on the page. A short reply after payment is enough. No long questionnaires.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is this a full website?</h3>
+            <p>No. One landing page — enough to explain the offer and take payment. If you need a multi-page site, blog, or app UI, this isn't the right fit.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Who owns the code?</h3>
+            <p>You do. You get the HTML file and the Vercel project. Host it yourself, move it, or edit it later.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I need it today?</h3>
+            <p>Choose the $249 rush option. Same deliverable, same-day delivery when kicked off before noon local time. Capacity is limited to one rush slot per day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap-wide footer-inner">
+      <p>Launch Page in 48 Hours · Fixed-scope offer for founders</p>
+      <p>Questions? Reply with your product URL</p>
+    </div>
+  </footer>
+</body>
+</html>
