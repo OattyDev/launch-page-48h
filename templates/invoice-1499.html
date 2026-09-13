@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invoice — Founder Site Sprint</title>
+  <style>
+    :root {
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #0f766e;
+      --bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: #f3f4f6;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    .sheet {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2.75rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+    }
+
+    .meta { text-align: right; font-size: 0.9rem; color: var(--muted); }
+    .meta strong { display: block; color: var(--text); font-size: 1rem; margin-bottom: 0.25rem; }
+
+    .parties {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .party h2 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .party p { color: var(--text); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.75rem;
+    }
+
+    th {
+      text-align: left;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th:last-child, td:last-child { text-align: right; }
+
+    td {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .desc { color: var(--muted); font-size: 0.85rem; margin-top: 0.25rem; }
+
+    .totals {
+      margin-left: auto;
+      width: 240px;
+      margin-bottom: 2rem;
+    }
+
+    .totals .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+    }
+
+    .totals .grand {
+      border-top: 2px solid var(--text);
+      margin-top: 0.4rem;
+      padding-top: 0.6rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .pay {
+      background: #f0fdfa;
+      border: 1px solid #99f6e4;
+      border-radius: 6px;
+      padding: 1.15rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pay h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .pay p { margin-bottom: 0.35rem; }
+    .pay .due { font-weight: 600; margin-top: 0.75rem; }
+
+    footer {
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; padding: 0; }
+      .sheet { border: none; max-width: none; padding: 0; }
+      .no-print { display: none; }
+    }
+
+    @page { margin: 1.5cm; }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <header>
+      <div>
+        <h1>INVOICE</h1>
+        <p class="note">Founder Site Sprint</p>
+      </div>
+      <div class="meta">
+        <strong>Invoice #[INVOICE_NUMBER]</strong>
+        Date: [INVOICE_DATE]<br />
+        Due: Upon receipt
+      </div>
+    </header>
+
+    <div class="parties">
+      <div class="party">
+        <h2>Bill To</h2>
+        <p>
+          [CLIENT_NAME]<br />
+          [CLIENT_EMAIL]<br />
+          [CLIENT_ADDRESS_OPTIONAL]
+        </p>
+      </div>
+      <div class="party">
+        <h2>From</h2>
+        <p>
+          [PAYEE_NAME]<br />
+          [PAYEE_EMAIL]<br />
+          [PAYEE_ADDRESS_OPTIONAL]
+        </p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Amount (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Founder Site Sprint — Fixed
+            <div class="desc">Landing page + 1 secondary page (pricing or about) + basic SEO meta + Wise invoice checkout copy. Delivery within 5 days of cleared payment.</div>
+          </td>
+          <td>1</td>
+          <td>$1,499.00</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="row"><span>Subtotal</span><span>$1,499.00</span></div>
+      <div class="row"><span>Tax</span><span>$0.00</span></div>
+      <div class="row grand"><span>Total due</span><span>$1,499.00</span></div>
+    </div>
+
+    <div class="pay">
+      <h2>Pay via Wise</h2>
+      <p><strong>Payee:</strong> [PAYEE_NAME]</p>
+      <p><strong>Method:</strong> Wise</p>
+      <p><strong>Account details:</strong> [WISE_EMAIL_OR_TAG]</p>
+      <p class="due">Amount due upon receipt. Work starts when payment clears. Delivery within 5 days of cleared payment.</p>
+    </div>
+
+    <footer>
+      <p>Thank you. Questions? Reply to this invoice email.</p>
+      <p class="note">Reference invoice #[INVOICE_NUMBER] on your transfer. Reference this SKU: Founder Site Sprint ($1,499). Delivery within 5 days of cleared payment.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 name: Request invoice
-description: Order a Launch Page in 48 Hours — you'll get a fixed-scope agreement + Wise invoice
+description: Order a fixed-scope SKU — you'll get a agreement + Wise invoice on this issue
 title: "[Invoice request] "
 labels: ["invoice-request"]
 body:
@@ -7,18 +7,33 @@ body:
     attributes:
       value: |
         ## How this works
-        1. Submit this form with your product URL and preferences.
+        1. Submit this form with your product URL and SKU.
         2. You'll get a **fixed-scope agreement** and a **Wise invoice** as a reply on this issue.
         3. **Work starts when payment clears** (bank transfer / Wise).
-        4. The **48-hour clock starts from cleared payment** — not from opening this issue.
+        4. Turnaround clocks start from **cleared payment** — not from opening this issue.
 
-        Questions? Leave a note below. No Stripe account needed.
+        SKUs: Launch Page $299 / Rush $499 · Grafana Alert Noise Kill $799 · Founder Site Sprint $1,499.
+        Sales page: https://oattydev.github.io/launch-page-48h/
+
+  - type: dropdown
+    id: sku
+    attributes:
+      label: SKU
+      description: Pick the package you want invoiced.
+      options:
+        - Launch Page — $299 (48h from cleared payment)
+        - Launch Page Rush — $499 (same-day)
+        - Grafana Alert Noise Kill — $799 (72h)
+        - Founder Site Sprint — $1,499 (5 days)
+      default: 0
+    validations:
+      required: true
 
   - type: input
     id: product-url
     attributes:
-      label: Product URL
-      description: Link to your product, app, or current site (required brief).
+      label: Product / Grafana URL
+      description: Link to your product, app, current site, or Grafana context (required brief).
       placeholder: https://yoursite.com
     validations:
       required: true
@@ -32,23 +47,11 @@ body:
     validations:
       required: false
 
-  - type: dropdown
-    id: package
-    attributes:
-      label: Package
-      description: Standard ships within 48h of cleared payment. Rush is same-day when payment clears before noon local time (limited capacity).
-      options:
-        - Standard — $149 (48h from cleared payment)
-        - Rush — $249 (same-day)
-      default: 0
-    validations:
-      required: true
-
   - type: textarea
     id: must-have
     attributes:
       label: Must-have notes
-      description: Who it's for, price/CTA you want, or anything that must appear on the page. Short is fine.
+      description: Who it's for, price/CTA, alert pain points, secondary page preference (pricing vs about), or anything that must appear. Short is fine.
       placeholder: "Audience: solo founders. CTA: book a demo. Price: $29/mo."
     validations:
       required: false

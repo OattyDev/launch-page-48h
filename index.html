@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Launch Page in 48 Hours — $149 Conversion Landing Page</title>
-  <meta name="description" content="Get a conversion landing page live on Vercel within 48 hours of cleared payment. Fixed scope for solo founders and small SaaS. $149, or $249 same-day rush. Pay by invoice." />
+  <title>Launch Page in 48 Hours — $299 · Plus Grafana & Founder Sprint</title>
+  <meta name="description" content="Conversion landing page live on Vercel within 48 hours of cleared payment. $299 standard / $499 rush. Also: Grafana Alert Noise Kill $799 · Founder Site Sprint $1,499. Wise invoice via GitHub Issues." />
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -422,13 +422,55 @@
       font-size: 0.9rem;
       color: var(--text-muted);
     }
+
+    .pricing-grid {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 720px) {
+      .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+      }
+    }
+
+    .pricing-card {
+      max-width: none;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .pricing-card .sku-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .pricing-card .btn { margin-top: auto; }
+
+    .pricing-card .price {
+      font-size: 2.35rem;
+    }
+
   </style>
 </head>
 <body>
   <header>
     <div class="wrap-wide header-inner">
       <div class="logo">Launch Page <span>in 48h</span></div>
-      <a class="btn btn-ghost" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $149</a>
+      <a class="btn btn-ghost" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice</a>
     </div>
   </header>
 
@@ -441,10 +483,10 @@
           Conversion landing page deployed to a free Vercel URL within 48 hours of cleared payment. Built for solo founders and small SaaS teams whose marketing site is weak, outdated, or missing.
         </p>
         <div class="hero-ctas">
-          <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $149</a>
+          <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $299</a>
           <a class="btn btn-ghost" href="#faq">See what's included</a>
         </div>
-        <p class="hero-note">Rush available: $249 same-day. One page. Clear scope. No retainers.</p>
+        <p class="hero-note">Launch Page $299 (rush $499 same-day) · Grafana noise kill $799 · Founder Site Sprint $1,499. Clear scope. Wise invoice.</p>
 
         <div class="who">
           <strong>Who this is for</strong>
@@ -501,7 +543,7 @@
           <div class="step">
             <div class="step-num">2</div>
             <h3>Get agreement + Wise invoice</h3>
-            <p>You'll get a fixed-scope agreement and a Wise invoice as a reply on the issue ($149 or $249 rush).</p>
+            <p>You'll get a fixed-scope agreement and a Wise invoice as a reply on the issue (pick SKU on the form).</p>
           </div>
           <div class="step">
             <div class="step-num">3</div>
@@ -518,26 +560,61 @@
     </section>
 
     <section id="buy">
-      <div class="wrap">
+      <div class="wrap-wide">
         <p class="section-label" style="text-align:center">Pricing</p>
-        <h2 style="text-align:center">Simple fixed price</h2>
-        <p class="section-intro" style="text-align:center;margin-inline:auto">No hourly billing. No scope creep. One deliverable. Pay by invoice.</p>
-        <div class="pricing-card">
-          <p class="section-label" style="margin-bottom:0">Launch Page in 48 Hours</p>
-          <div class="price">$149 <span>standard</span></div>
-          <p class="rush">Rush: $249 · same-day turnaround</p>
-          <div class="flow">
-            <strong>How to order:</strong> Open the GitHub issue form → get agreement + Wise invoice in the reply → pay → page ships. Work starts when payment clears; the 48h clock starts from cleared payment.
+        <h2 style="text-align:center">Three fixed SKUs</h2>
+        <p class="section-intro" style="text-align:center;margin-inline:auto">No hourly billing. No scope creep. Pay by Wise invoice via GitHub Issues order desk.</p>
+        <div class="pricing-grid">
+          <div class="pricing-card featured">
+            <p class="sku-tag">Primary</p>
+            <p class="section-label" style="margin-bottom:0">Launch Page in 48 Hours</p>
+            <div class="price">$299 <span>standard</span></div>
+            <p class="rush">Rush: $499 · same-day turnaround</p>
+            <div class="flow">
+              <strong>How to order:</strong> Open the GitHub issue → pick Launch Page SKU → get agreement + Wise invoice → pay → page ships. 48h clock starts at cleared payment.
+            </div>
+            <ul>
+              <li>1 conversion page, copy, mobile layout</li>
+              <li>Analytics stub + clear CTA</li>
+              <li>Live on free Vercel URL in 48 hours</li>
+              <li>One round of small revisions</li>
+            </ul>
+            <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $299</a>
           </div>
-          <ul>
-            <li>1 page, copy, mobile layout</li>
-            <li>Analytics stub + clear CTA</li>
-            <li>Live on free Vercel URL in 48 hours</li>
-            <li>One round of small revisions</li>
-          </ul>
-          <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $149</a>
+          <div class="pricing-card">
+            <p class="sku-tag">Ops</p>
+            <p class="section-label" style="margin-bottom:0">Grafana Alert Noise Kill</p>
+            <div class="price">$799 <span>fixed</span></div>
+            <p class="rush">72h after payment clears</p>
+            <div class="flow">
+              <strong>Deliverable:</strong> Audit noisy alerts + deliver a cleaned dashboard/alert set. Same order desk — select the Grafana SKU on the issue form.
+            </div>
+            <ul>
+              <li>Noise audit of current alert rules</li>
+              <li>Cleaned alert + dashboard set</li>
+              <li>Delivery within 72h of cleared payment</li>
+              <li>Fixed price — no hourly surprise</li>
+            </ul>
+            <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $799</a>
+          </div>
+          <div class="pricing-card">
+            <p class="sku-tag">High ticket</p>
+            <p class="section-label" style="margin-bottom:0">Founder Site Sprint</p>
+            <div class="price">$1,499 <span>fixed</span></div>
+            <p class="rush">5 days after payment clears</p>
+            <div class="flow">
+              <strong>Deliverable:</strong> Landing + 1 secondary page (pricing or about) + basic SEO meta + Wise invoice checkout copy.
+            </div>
+            <ul>
+              <li>Landing page + 1 secondary page</li>
+              <li>Basic SEO meta tags</li>
+              <li>Wise invoice checkout copy</li>
+              <li>Ships in 5 days of cleared payment</li>
+            </ul>
+            <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $1,499</a>
+          </div>
         </div>
-        <p class="pricing-foot">Payment by Wise invoice (or bank transfer).<br />Ready? <a href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Open an invoice request on GitHub</a>.</p>
+        <p class="pricing-foot">Payment by Wise invoice (or bank transfer).<br />Ready? <a href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Open an invoice request on GitHub</a> and pick your SKU.</p>
       </div>
     </section>
 
@@ -562,9 +639,18 @@
             <h3>Who owns the code?</h3>
             <p>You do. You get the HTML file and the Vercel project. Host it yourself, move it, or edit it later.</p>
           </div>
+
+          <div class="faq-item">
+            <h3>What is Grafana Alert Noise Kill?</h3>
+            <p>A fixed $799 engagement: audit your noisy Grafana alerts and deliver a cleaned dashboard/alert set within 72 hours of cleared payment. Order via the same GitHub invoice form — select the Grafana SKU.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is Founder Site Sprint?</h3>
+            <p>A $1,499 high-ticket package: landing page + one secondary page (pricing or about) + basic SEO meta + Wise invoice checkout copy, delivered in 5 days after payment clears.</p>
+          </div>
           <div class="faq-item">
             <h3>What if I need it today?</h3>
-            <p>Choose the $249 rush option. Same deliverable, same-day delivery when payment clears before noon local time. Capacity is limited to one rush slot per day.</p>
+            <p>Choose the $499 rush option on the Launch Page SKU. Same deliverable, same-day delivery when payment clears before noon local time. Capacity is limited to one rush slot per day.</p>
           </div>
         </div>
       </div>
