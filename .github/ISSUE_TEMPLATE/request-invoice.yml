@@ -12,7 +12,7 @@ body:
         3. **Work starts when payment clears** (bank transfer / Wise).
         4. Turnaround clocks start from **cleared payment** — not from opening this issue.
 
-        SKUs: Launch Page $299 / Rush $499 · Grafana Alert Noise Kill $799 · Founder Site Sprint $1,499.
+        SKUs: First client Launch Page $99 (one-time) · Launch Page $299 / Rush $499 · Grafana Alert Noise Kill $799 · Founder Site Sprint $1,499.
         Sales page: https://oattydev.github.io/launch-page-48h/
 
   - type: dropdown
@@ -21,6 +21,7 @@ body:
       label: SKU
       description: Pick the package you want invoiced.
       options:
+        - First client Launch Page — $99 (48h · one-time special)
         - Launch Page — $299 (48h from cleared payment)
         - Launch Page Rush — $499 (same-day)
         - Grafana Alert Noise Kill — $799 (72h)

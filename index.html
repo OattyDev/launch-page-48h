@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Launch Page in 48 Hours — $299 · Plus Grafana & Founder Sprint</title>
-  <meta name="description" content="Conversion landing page live on Vercel within 48 hours of cleared payment. $299 standard / $499 rush. Also: Grafana Alert Noise Kill $799 · Founder Site Sprint $1,499. Wise invoice via GitHub Issues." />
+  <title>Launch Page in 48 Hours — First client $99 · $299 / $499</title>
+  <meta name="description" content="First-client special $99 (one-time). Then $299 standard / $499 rush. Also: Grafana Alert Noise Kill $799 · Founder Site Sprint $1,499. Wise invoice via GitHub Issues." />
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -431,8 +431,13 @@
 
     @media (min-width: 720px) {
       .pricing-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         align-items: stretch;
+      }
+    }
+    @media (min-width: 980px) {
+      .pricing-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
@@ -477,16 +482,16 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <div class="eyebrow">Fixed scope · 48-hour turnaround</div>
+        <div class="eyebrow">First client special · $99 one-time</div>
         <h1>A live sales page before the week ends</h1>
         <p class="lede">
           Conversion landing page deployed to a free Vercel URL within 48 hours of cleared payment. Built for solo founders and small SaaS teams whose marketing site is weak, outdated, or missing.
         </p>
         <div class="hero-ctas">
-          <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $299</a>
-          <a class="btn btn-ghost" href="#faq">See what's included</a>
+          <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">First client — $99</a>
+          <a class="btn btn-ghost" href="#buy">See all SKUs</a>
         </div>
-        <p class="hero-note">Launch Page $299 (rush $499 same-day) · Grafana noise kill $799 · Founder Site Sprint $1,499. Clear scope. Wise invoice.</p>
+        <p class="hero-note">First client special <strong style="color:var(--text)">$99</strong> (one-time) · then $299 / rush $499 · Grafana $799 · Founder Sprint $1,499. Wise invoice.</p>
 
         <div class="who">
           <strong>Who this is for</strong>
@@ -562,22 +567,37 @@
     <section id="buy">
       <div class="wrap-wide">
         <p class="section-label" style="text-align:center">Pricing</p>
-        <h2 style="text-align:center">Three fixed SKUs</h2>
+        <h2 style="text-align:center">Fixed SKUs · First client $99</h2>
         <p class="section-intro" style="text-align:center;margin-inline:auto">No hourly billing. No scope creep. Pay by Wise invoice via GitHub Issues order desk.</p>
         <div class="pricing-grid">
           <div class="pricing-card featured">
-            <p class="sku-tag">Primary</p>
-            <p class="section-label" style="margin-bottom:0">Launch Page in 48 Hours</p>
-            <div class="price">$299 <span>standard</span></div>
-            <p class="rush">Rush: $499 · same-day turnaround</p>
+            <p class="sku-tag">First client special</p>
+            <p class="section-label" style="margin-bottom:0">Launch Page — first client</p>
+            <div class="price">$99 <span>one-time</span></div>
+            <p class="rush">Same deliverable as $299 · limited to first paying client</p>
             <div class="flow">
-              <strong>How to order:</strong> Open the GitHub issue → pick Launch Page SKU → get agreement + Wise invoice → pay → page ships. 48h clock starts at cleared payment.
+              <strong>How to order:</strong> Open the GitHub issue → pick <em>First client $99</em> → get agreement + Wise invoice → pay → page ships. 48h clock starts at cleared payment. After the first close, standard is $299 / rush $499.
             </div>
             <ul>
               <li>1 conversion page, copy, mobile layout</li>
               <li>Analytics stub + clear CTA</li>
               <li>Live on free Vercel URL in 48 hours</li>
               <li>One round of small revisions</li>
+            </ul>
+            <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $99</a>
+          </div>
+          <div class="pricing-card">
+            <p class="sku-tag">Standard</p>
+            <p class="section-label" style="margin-bottom:0">Launch Page in 48 Hours</p>
+            <div class="price">$299 <span>standard</span></div>
+            <p class="rush">Rush: $499 · same-day turnaround</p>
+            <div class="flow">
+              <strong>How to order:</strong> Same Issues order desk — pick Launch Page $299 or Rush $499.
+            </div>
+            <ul>
+              <li>Same deliverable as the $99 special</li>
+              <li>48h from cleared payment ($299)</li>
+              <li>Same-day rush when capacity allows ($499)</li>
             </ul>
             <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice — $299</a>
           </div>
@@ -624,6 +644,10 @@
         <h2>Common questions</h2>
         <div class="faq-list">
           <div class="faq-item">
+            <h3>What is the $99 first-client special?</h3>
+            <p>Same Launch Page deliverable as the $299 SKU, priced at $99 one-time for the first paying client only — to get a live case study and proof. After that close, the public price returns to $299 / $499 rush. Order via the GitHub invoice form and select the $99 SKU.</p>
+          </div>
+          <div class="faq-item">
             <h3>What do you need from me?</h3>
             <p>Your product URL, who it's for, and the price or CTA you want on the page. The GitHub issue form covers it — no long questionnaires.</p>
           </div>
@@ -650,7 +674,7 @@
           </div>
           <div class="faq-item">
             <h3>What if I need it today?</h3>
-            <p>Choose the $499 rush option on the Launch Page SKU. Same deliverable, same-day delivery when payment clears before noon local time. Capacity is limited to one rush slot per day.</p>
+            <p>Choose the $499 rush option on the invoice form (or $99 / $299 for standard turnaround). Same deliverable, same-day delivery when payment clears before noon local time. Capacity is limited to one rush slot per day.</p>
           </div>
         </div>
       </div>
