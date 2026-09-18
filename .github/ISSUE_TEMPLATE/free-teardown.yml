@@ -1,0 +1,54 @@
+name: Free 5-minute landing-page teardown
+description: Get a free written roast of your landing page — no payment, no pitch call required
+title: "[Free teardown] "
+labels: ["free-teardown"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Free 5-minute landing-page teardown
+        Paste your live URL. You'll get a short written roast (what's weak, what's missing, one fix that would move conversion) as a reply on this issue.
+
+        **Free. No payment. No call.**
+        If the page needs a rebuild, the paid path is still here: [First client $99 / standard $299](https://oattydev.github.io/launch-page-48h/) via Wise invoice — but this teardown stands alone.
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Landing page URL
+      description: The live page you want roasted (homepage, waitlist, or sales page).
+      placeholder: https://yoursite.com
+    validations:
+      required: true
+
+  - type: input
+    id: name-handle
+    attributes:
+      label: Name / handle
+      description: Optional — how should we address you?
+      placeholder: Alex / @alex
+    validations:
+      required: false
+
+  - type: dropdown
+    id: goal
+    attributes:
+      label: Primary goal of this page
+      options:
+        - Get signups / waitlist
+        - Book a call / demo
+        - Sell a product (checkout)
+        - Explain a SaaS / tool
+        - Not sure / other
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Optional context
+      description: Audience, offer price, or what feels off. Short is fine.
+      placeholder: "Audience: solo founders. Offer: $29/mo. Page feels generic."
+    validations:
+      required: false

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Launch Page in 48 Hours — First client $99 · $299 / $499</title>
-  <meta name="description" content="First-client special $99 (one-time). Then $299 standard / $499 rush. Also: Grafana Alert Noise Kill $799 · Founder Site Sprint $1,499. Wise invoice via GitHub Issues." />
+  <meta name="description" content="Free 5-minute landing-page teardown via GitHub Issue. First-client special $99 (one-time). Then $299 / $499 rush. Grafana $799 · Founder Sprint $1,499. Wise invoice via GitHub Issues." />
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -469,13 +469,44 @@
       font-size: 2.35rem;
     }
 
+
+    .magnet {
+      margin-top: 1.75rem;
+      padding: 1.25rem 1.35rem;
+      background: var(--accent-dim);
+      border: 1px solid rgba(45, 212, 191, 0.35);
+      border-radius: var(--radius);
+      text-align: left;
+    }
+    .magnet h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+    .magnet p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 0.9rem;
+    }
+    .magnet .btn { margin-top: 0.15rem; }
+    .magnet-note {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
   </style>
 </head>
 <body>
   <header>
     <div class="wrap-wide header-inner">
       <div class="logo">Launch Page <span>in 48h</span></div>
-      <a class="btn btn-ghost" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice</a>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:flex-end">
+        <a class="btn btn-ghost" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=free-teardown.yml" target="_blank" rel="noopener">Free teardown</a>
+        <a class="btn btn-ghost" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">Request invoice</a>
+      </div>
     </div>
   </header>
 
@@ -489,9 +520,17 @@
         </p>
         <div class="hero-ctas">
           <a class="btn btn-primary btn-lg" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=request-invoice.yml" target="_blank" rel="noopener">First client — $99</a>
+          <a class="btn btn-ghost" href="#free-teardown">Free 5-min teardown</a>
           <a class="btn btn-ghost" href="#buy">See all SKUs</a>
         </div>
         <p class="hero-note">First client special <strong style="color:var(--text)">$99</strong> (one-time) · then $299 / rush $499 · Grafana $799 · Founder Sprint $1,499. Wise invoice.</p>
+
+        <div class="magnet" id="free-teardown">
+          <h2>Free inbound magnet</h2>
+          <p>Not ready to buy? Open a GitHub Issue for a <strong style="color:var(--text)">free 5-minute landing-page teardown</strong> — a short written roast of what's weak, what's missing, and one fix that would move conversion. No payment. No call.</p>
+          <a class="btn btn-primary" href="https://github.com/OattyDev/launch-page-48h/issues/new?template=free-teardown.yml" target="_blank" rel="noopener">Request free teardown</a>
+          <p class="magnet-note">If the roast shows a rebuild is worth it, the paid path is still $99 first client / $299 standard via Wise invoice — same Issues order desk.</p>
+        </div>
 
         <div class="who">
           <strong>Who this is for</strong>
@@ -644,6 +683,10 @@
         <h2>Common questions</h2>
         <div class="faq-list">
           <div class="faq-item">
+            <h3>What is the free 5-minute landing-page teardown?</h3>
+            <p>A free written roast via GitHub Issue: paste your live URL, get a short critique (weak spots, missing pieces, one high-leverage fix). No payment and no sales call required. If you later want a rebuild, order the $99 / $299 Launch Page via the Wise invoice form on the same repo.</p>
+          </div>
+          <div class="faq-item">
             <h3>What is the $99 first-client special?</h3>
             <p>Same Launch Page deliverable as the $299 SKU, priced at $99 one-time for the first paying client only — to get a live case study and proof. After that close, the public price returns to $299 / $499 rush. Order via the GitHub invoice form and select the $99 SKU.</p>
           </div>
@@ -684,7 +727,7 @@
   <footer>
     <div class="wrap-wide footer-inner">
       <p>Launch Page in 48 Hours · Fixed-scope offer for founders</p>
-      <p>Payment by Wise invoice (or bank transfer). Order via GitHub Issues.</p>
+      <p>Free teardown or paid Wise invoice — both via GitHub Issues.</p>
     </div>
   </footer>
 </body>
